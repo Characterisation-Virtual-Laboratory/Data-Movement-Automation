@@ -1,7 +1,7 @@
 #!/bin/bash
 
-SCRIPT_NAME="TransferScript"
 USER_NAME="user"
+SCRIPT_NAME="TransferScript"
 INSTALL_PATH="/usr/local/scripts/${SCRIPT_NAME}"
 SYSTEMD_PATH="/etc/systemd/system"
 
