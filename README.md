@@ -30,24 +30,28 @@ RClone v1.61.1+<br>
 <br><br><br><br>
 
 ### Configuration
-Edit the following files:<br>
+**Edit the following files:**<br>
 `/usr/local/scripts/<SCRIPT_NAME>/config.json`<br>
 
-> This is where most of your transfer settings are defined.<br><br>
+> This is where most of your transfer settings are defined.<br>
 
+<br>
 `/usr/local/scripts/<SCRIPT_NAME>/excludes.txt`<br>
 
-> Any files / folders you want to exclude from the transfers.<br><br>
+> Any files / folders you want to exclude from the transfers.<br>
 
+<br>
 `/etc/systemd/system/<SCRIPT_NAME>.service`<br>
 
-> Set "User=<user_to_run_as>" for the script and RClone transfer.<br><br>
+> Set "User=<user_to_run_as>" for the script and RClone transfer.<br>
 
+<br>
 `/etc/systemd/system/<SCRIPT_NAME>.timer`<br>
 
-> Set when you want this to run.<br><br>
+> Set when you want the script to run.<br>
 
-Fix ownership:<br>
+<br>
+**Fix ownership:**<br>
 `$ sudo chown -R <user_to_run_as> /usr/local/scripts/<SCRIPT_NAME>`<br><br>
 
 Add any required endpoints into rclone (not required for local src / dest):<br>
@@ -57,8 +61,7 @@ Add any required endpoints into rclone (not required for local src / dest):<br>
 
 > See: https://rclone.org/commands/rclone_config/
 
-
-
+<br><br><br><br>
 
 ### Enable ###
 `$ sudo systemctl enable <SCRIPT_NAME>.timer`
