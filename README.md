@@ -31,13 +31,10 @@ RClone v1.61.1+<br>
 
 ### Configuration
 **Edit the following files:**<br>
-`/usr/local/scripts/<SCRIPT_NAME>/config.json`
-<br>
+`/usr/local/scripts/<SCRIPT_NAME>/config.json`<br>
 
-This is where most of your transfer settings are defined.
-<br>
+This is where most of your transfer settings are defined.<br>
 
-<br>
 `/usr/local/scripts/<SCRIPT_NAME>/excludes.txt`
 <br>
 
