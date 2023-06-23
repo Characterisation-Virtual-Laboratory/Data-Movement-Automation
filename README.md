@@ -10,9 +10,9 @@ Can be configured with a list of transfers so multiple source and destination pa
 
 
 ### Requirements
-Python 3.8+
+Python 3.8+<br>
 `$ sudo dnf install python38`
-RClone v1.61.1+
+RClone v1.61.1+<br>
 `$ curl -O https://downloads.rclone.org/rclone-current-linux.amd.zip1
 
 
