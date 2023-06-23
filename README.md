@@ -34,7 +34,7 @@ RClone v1.61.1+<br>
 `/usr/local/scripts/<SCRIPT_NAME>/config.json`
 <br>
 
-> This is where most of your transfer settings are defined.
+This is where most of your transfer settings are defined.
 <br>
 
 <br>
