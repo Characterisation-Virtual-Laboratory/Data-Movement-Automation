@@ -1,0 +1,94 @@
+{
+  "log_settings":
+    {
+      "log_dir": "logs",
+      "log_level": "DEBUG",
+      "keep_on_success": true,
+      "remove_after_days": 14
+    },
+  "email_settings":
+    {
+      "send_on_success": false,
+      "recipients":
+        [
+          "user1@uow.edu.au",
+          "user2@uow.edu.au"
+        ],
+      "from": "noreply@uow.edu.au",
+      "smtp_server": "smtp.uow.edu.au"
+    },
+  "transfer_settings":
+    {
+      "rclone_bin": "/usr/bin/rclone",
+      "rclone_log_level": "INFO",
+      "task_list":
+        [
+          {
+            "description": "Transfer_1",
+	    "rclone_action_comment": "Options: copy|move|rmdirs|sync|off",
+            "rclone_action": "move",
+            "rclone_dry_run": false,
+            "rclone_num_transfers": 4,
+            "rclone_num_checkers": 4,
+            "rclone_excludes_comment": "Options: <on|off>",
+            "rclone_excludes": "on",
+	    "rclone_min_age_seconds_comment": "Options: set to '-1' to disable",
+            "rclone_min_age_seconds": 120,
+	    "rclone_min_age_days_comment": "Options: set to '-1' to disable",
+            "rclone_min_age_days": -1,
+	    "rclone_max_age_days_comment": "Options: set to '-1' to disable",
+            "rclone_max_age_days": -1,
+            "rclone_delete_excluded_comment": "Options: <on|off>",
+            "rclone_delete_excluded": "off",
+            "rclone_max_duration_minutes_comment": "Options: set to '-1' to disable",
+            "rclone_max_duration_minutes": 60,
+            "source": "/path/to/source_1/",
+            "destination": "/path/to/dest_1/"
+          },
+          {
+            "description": "Transfer_2",
+	    "rclone_action_comment": "Options: copy|move|rmdirs|sync|off",
+            "rclone_action": "off",
+            "rclone_dry_run": false,
+            "rclone_num_transfers": 4,
+            "rclone_num_checkers": 4,
+            "rclone_excludes_comment": "Options: <on|off>",
+            "rclone_excludes": "on",
+	    "rclone_min_age_seconds_comment": "Options: set to '-1' to disable",
+            "rclone_min_age_seconds": 120,
+	    "rclone_min_age_days_comment": "Options: set to '-1' to disable",
+            "rclone_min_age_days": -1,
+	    "rclone_max_age_days_comment": "Options: set to '-1' to disable",
+            "rclone_max_age_days": -1,
+            "rclone_delete_excluded_comment": "Options: <on|off>",
+            "rclone_delete_excluded": "off",
+            "rclone_max_duration_minutes_comment": "Options: set to '-1' to disable",
+            "rclone_max_duration_minutes": 60,
+            "source": "/path/to/source_2/",
+            "destination": "/path/to/dest_2/"
+          },
+          {
+            "description": "Backup",
+	    "rclone_action_comment": "Options: copy|move|rmdirs|sync|off",
+            "rclone_action": "off",
+            "rclone_dry_run": false,
+            "rclone_num_transfers": 4,
+            "rclone_num_checkers": 4,
+            "rclone_excludes_comment": "Options: <on|off>",
+            "rclone_excludes": "on",
+	    "rclone_min_age_seconds_comment": "Options: set to '-1' to disable",
+            "rclone_min_age_seconds": 120,
+	    "rclone_min_age_days_comment": "Options: set to '-1' to disable",
+            "rclone_min_age_days": -1,
+	    "rclone_max_age_days_comment": "Options: set to '-1' to disable",
+            "rclone_max_age_days": -1,
+            "rclone_delete_excluded_comment": "Options: <on|off>",
+            "rclone_delete_excluded": "off",
+            "rclone_max_duration_minutes_comment": "Options: set to '-1' to disable",
+            "rclone_max_duration_minutes": 300,
+            "source": "/path/to/source",
+            "destination": "S3:/path/to/backup/"
+          }
+        ]
+    }
+}

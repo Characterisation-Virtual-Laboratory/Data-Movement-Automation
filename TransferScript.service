@@ -1,0 +1,8 @@
+[Unit]
+Description=Wrapper script for RClone automation
+Wants=TransferScript.timer
+
+[Service]
+Type=oneshot
+User=gatan
+ExecStart=/usr/bin/python3 -O /usr/local/scripts/TransferScript/TransferScript.py
