@@ -25,7 +25,7 @@ $ git clone https://github.com/Characterisation-Virtual-Laboratory/Data-Movement
 ### Install Commands
 `$ cd ~/Downloads/Data-Movement-Automation`<br>
 
-> **OPTIONAL:** Edit "SCRIPT_NAME" inside "INSTALL.sh" to new name.<br>
+> **OPTIONAL:** Change "SCRIPT_NAME" inside "INSTALL.sh" to a new name.<br>
 > Allows installing multiple copies under different names, useful if running multiple copies<br>
 > eg: A copy per microscope, or a separate backup script etc.<br>
 
@@ -33,7 +33,10 @@ $ git clone https://github.com/Characterisation-Virtual-Laboratory/Data-Movement
 <br><br><br><br>
 
 ### Configuration
-**Edit the following files:**<br>
+**Fix ownership:**<br>
+`$ sudo chown -R <USER_TO_RUN_AS> /usr/local/scripts/<SCRIPT_NAME>`<br>
+
+<br>**Edit the following files:**<br>
 `/usr/local/scripts/<SCRIPT_NAME>/config.json`<br>
 > This is where most of your transfer settings are defined.<br>
 
@@ -41,15 +44,12 @@ $ git clone https://github.com/Characterisation-Virtual-Laboratory/Data-Movement
 > Any files / folders you want to exclude from the transfers.<br>
 
 <br>`/etc/systemd/system/<SCRIPT_NAME>.service`<br>
-> Set "User=<user_to_run_as>" for the script and RClone transfer.<br>
+> Set "User=<USER_TO_RUN_AS>" for the script and RClone transfer.<br>
 
 <br>`/etc/systemd/system/<SCRIPT_NAME>.timer`<br>
 > Set when you want the script to run.<br>
 
-<br>**Fix ownership:**<br>
-`$ sudo chown -R <user_to_run_as> /usr/local/scripts/<SCRIPT_NAME>`<br>
-
-Add any required endpoints into rclone (not required for local src / dest):
+<br>Add any required endpoints into rclone (not required for local src / dest):
 ```
 $ su <user_to_run_as>
 $ export RCLONE_CONFIG=/usr/local/scripts/<SCRIPT_NAME>/rclone.conf
@@ -57,5 +57,6 @@ $ rclone config
 ```
 > See: https://rclone.org/commands/rclone_config/
 <br><br><br><br>
+
 ### Enable
 `$ sudo systemctl enable <SCRIPT_NAME>.timer`
