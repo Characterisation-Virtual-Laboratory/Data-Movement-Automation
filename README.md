@@ -24,6 +24,7 @@ $ git clone https://github.com/Characterisation-Virtual-Laboratory/Data-Movement
 
 ### Install Commands
 `$ cd ~/Downloads/Data-Movement-Automation`<br>
+**SET:** "USER_NAME" inside "INSTALL.sh" to the account the script will run as.
 
 > **OPTIONAL:** Change "SCRIPT_NAME" inside "INSTALL.sh" to a new name.<br>
 > Allows installing multiple copies under different names, useful if running multiple copies<br>
@@ -33,18 +34,17 @@ $ git clone https://github.com/Characterisation-Virtual-Laboratory/Data-Movement
 <br><br><br><br>
 
 ### Configuration
-**Fix ownership:**<br>
-`$ sudo chown -R <USER_TO_RUN_AS> /usr/local/scripts/<SCRIPT_NAME>`<br>
 
 <br>**Edit the following files:**<br>
 `/usr/local/scripts/<SCRIPT_NAME>/config.json`<br>
 > This is where most of your transfer settings are defined.<br>
 
-<br>`/usr/local/scripts/<SCRIPT_NAME>/excludes.txt`<br>
-> Any files / folders you want to exclude from the transfers.<br>
-
-<br>`/etc/systemd/system/<SCRIPT_NAME>.service`<br>
-> Set "User=<USER_TO_RUN_AS>" for the script and RClone transfer.<br>
+<br>`/usr/local/scripts/<SCRIPT_NAME>/filters.txt`<br>
+> Any files / folders you want to filter durring the transfers.<br>
+> Will look for "<DESCRIPTION>_filters.txt" if it exists, else will use the default "filters.txt"<br>
+> Allows for unique filter settings per task.<br>
+> eg: A task called "Backup" will look for "Backup_filters.txt"<br>
+> See: https://rclone.org/filtering<br>
 
 <br>`/etc/systemd/system/<SCRIPT_NAME>.timer`<br>
 > Set when you want the script to run.<br>
