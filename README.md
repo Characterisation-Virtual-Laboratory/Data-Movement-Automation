@@ -5,22 +5,19 @@ Designed for easy configuration and reuse via the associated 'config.json' file.
 Logs transfers and sends an alert email on errors.
 
 Can be configured with a list of transfers so multiple source and destination pairs can be managed with a single instance if desired.
-<br><br><br><br>
 
-### Requirements
-Python 3.8+<br>
-`$ sudo dnf install python38`<br><br>
-RClone v1.61.1+<br>
+<br><br><br><br>### Requirements
+Python 3.8+
+`$ sudo dnf install python38`
+<br>RClone v1.61.1+
 `$ curl -O https://downloads.rclone.org/rclone-current-linux.amd.zip`
-<br><br><br><br>
 
-### Download Commands
+<br><br><br><br>### Download Commands
 
 ```
 $ cd ~/Downloads
 $ git clone https://github.com/Characterisation-Virtual-Laboratory/Data-Movement-Automation
 ```
-
 <br><br><br><br>
 
 ### Install Commands
@@ -54,7 +51,7 @@ $ git clone https://github.com/Characterisation-Virtual-Laboratory/Data-Movement
 <br>**Fix ownership:**<br>
 `$ sudo chown -R <user_to_run_as> /usr/local/scripts/<SCRIPT_NAME>`<br>
 
-<br>Add any required endpoints into rclone (not required for local src / dest):<br>
+Add any required endpoints into rclone (not required for local src / dest):
 
 ```
 $ su <user_to_run_as>
@@ -64,7 +61,5 @@ $ rclone config
 
 > See: https://rclone.org/commands/rclone_config/
 
-<br><br><br><br>
-
-### Enable ###
+<br><br><br><br>### Enable
 `$ sudo systemctl enable <SCRIPT_NAME>.timer`
