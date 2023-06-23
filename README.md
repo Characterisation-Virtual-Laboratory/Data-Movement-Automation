@@ -1,4 +1,4 @@
-### TransferScript ###
+### TransferScript
 A wrapper script for RClone to allow for automated, parallel file transfers.
 Designed for easy configuration and reuse via the associated 'config.json' file.
 
@@ -9,31 +9,33 @@ Can be configured with a list of transfers so multiple source and destination pa
 
 
 
-### Requirements ###
-Python 3.8+			($ sudo dnf install python38)
-RClone v1.61.1+			($ curl -O https://downloads.rclone.org/rclone-current-linux.amd.zip)
+### Requirements
+Python 3.8+
+`$ sudo dnf install python38`
+RClone v1.61.1+
+`$ curl -O https://downloads.rclone.org/rclone-current-linux.amd.zip1
 
 
 
 
-### Download Commands ###
-$ cd ~/Downloads
-$ git clone https://github.com/Characterisation-Virtual-Laboratory/Data-Movement-Automation
+### Download Commands
+`$ cd ~/Downloads
+$ git clone https://github.com/Characterisation-Virtual-Laboratory/Data-Movement-Automation`
 
 
 
 
-### Install Commands ###
-$ cd ~/Downloads/Data-Movement-Automation
+### Install Commands
+`$ cd ~/Downloads/Data-Movement-Automation`
 OPTIONAL: Edit "SCRIPT_NAME" inside "INSTALL.sh" to new name.
 	Allows installing multiple copies under different names, useful if running multiple copies
 	eg: A copy per microscope, or a separate backup script etc.
-$ sudo /bin/bash ./INSTALL.sh
+`$ sudo /bin/bash ./INSTALL.sh`
 
 
 
 
-### Configuration ###
+### Configuration
 Edit the following files:
 	/usr/local/scripts/<SCRIPT_NAME>/config.json
 		This is where most of your transfer settings are defined.
