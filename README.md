@@ -16,7 +16,6 @@ RClone v1.61.1+<br>
 <br><br><br><br>
 
 ### Download Commands
-
 ```
 $ cd ~/Downloads
 $ git clone https://github.com/Characterisation-Virtual-Laboratory/Data-Movement-Automation
@@ -36,33 +35,27 @@ $ git clone https://github.com/Characterisation-Virtual-Laboratory/Data-Movement
 ### Configuration
 **Edit the following files:**<br>
 `/usr/local/scripts/<SCRIPT_NAME>/config.json`<br>
-
 > This is where most of your transfer settings are defined.<br>
 
 <br>`/usr/local/scripts/<SCRIPT_NAME>/excludes.txt`<br>
-
 > Any files / folders you want to exclude from the transfers.<br>
 
 <br>`/etc/systemd/system/<SCRIPT_NAME>.service`<br>
-
 > Set "User=<user_to_run_as>" for the script and RClone transfer.<br>
 
 <br>`/etc/systemd/system/<SCRIPT_NAME>.timer`<br>
-
 > Set when you want the script to run.<br>
 
 <br>**Fix ownership:**<br>
 `$ sudo chown -R <user_to_run_as> /usr/local/scripts/<SCRIPT_NAME>`<br>
 
 Add any required endpoints into rclone (not required for local src / dest):
-
 ```
 $ su <user_to_run_as>
 $ export RCLONE_CONFIG=/usr/local/scripts/<SCRIPT_NAME>/rclone.conf
 $ rclone config
 ```
-
 > See: https://rclone.org/commands/rclone_config/
-
-<br><br><br><br>### Enable
+<br><br><br><br>
+### Enable
 `$ sudo systemctl enable <SCRIPT_NAME>.timer`
