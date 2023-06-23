@@ -37,9 +37,9 @@ This is where most of your transfer settings are defined.<br><br>
 
 `/usr/local/scripts/<SCRIPT_NAME>/excludes.txt`<br>
 
-> Any files / folders you want to exclude from the transfers.<br><br>
+> Any files / folders you want to exclude from the transfers.<br>
 
-`/etc/systemd/system/<SCRIPT_NAME>.service`<br>
+<br>`/etc/systemd/system/<SCRIPT_NAME>.service`<br>
 
 > Set "User=<user_to_run_as>" for the script and RClone transfer.<br>
 
