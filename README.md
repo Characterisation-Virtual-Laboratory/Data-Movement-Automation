@@ -5,14 +5,17 @@ Designed for easy configuration and reuse via the associated 'config.json' file.
 Logs transfers and sends an alert email on errors.
 
 Can be configured with a list of transfers so multiple source and destination pairs can be managed with a single instance if desired.
+<br><br><br><br>
 
-<br><br><br><br>### Requirements
-Python 3.8+
+### Requirements
+Python 3.8+<br>
 `$ sudo dnf install python38`
-<br>RClone v1.61.1+
-`$ curl -O https://downloads.rclone.org/rclone-current-linux.amd.zip`
 
-<br><br><br><br>### Download Commands
+RClone v1.61.1+<br>
+`$ curl -O https://downloads.rclone.org/rclone-current-linux.amd.zip`
+<br><br><br><br>
+
+### Download Commands
 
 ```
 $ cd ~/Downloads
