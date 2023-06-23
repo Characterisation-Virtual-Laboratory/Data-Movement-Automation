@@ -11,52 +11,52 @@ Can be configured with a list of transfers so multiple source and destination pa
 
 ### Requirements
 Python 3.8+<br>
-`$ sudo dnf install python38`
+`$ sudo dnf install python38`<br><br>
 RClone v1.61.1+<br>
-`$ curl -O https://downloads.rclone.org/rclone-current-linux.amd.zip1
+`$ curl -O https://downloads.rclone.org/rclone-current-linux.amd.zip`
 
 
 
 
 ### Download Commands
-`$ cd ~/Downloads
-$ git clone https://github.com/Characterisation-Virtual-Laboratory/Data-Movement-Automation`
+`$ cd ~/Downloads`<br>
+`$ git clone https://github.com/Characterisation-Virtual-Laboratory/Data-Movement-Automation`
 
 
 
 
 ### Install Commands
-`$ cd ~/Downloads/Data-Movement-Automation`
-OPTIONAL: Edit "SCRIPT_NAME" inside "INSTALL.sh" to new name.
-	Allows installing multiple copies under different names, useful if running multiple copies
-	eg: A copy per microscope, or a separate backup script etc.
+`$ cd ~/Downloads/Data-Movement-Automation`<br>
+OPTIONAL: Edit "SCRIPT_NAME" inside "INSTALL.sh" to new name.<br>
+	Allows installing multiple copies under different names, useful if running multiple copies<br>
+	eg: A copy per microscope, or a separate backup script etc.<br>
 `$ sudo /bin/bash ./INSTALL.sh`
 
 
 
 
 ### Configuration
-Edit the following files:
-	/usr/local/scripts/<SCRIPT_NAME>/config.json
-		This is where most of your transfer settings are defined.
-	/usr/local/scripts/<SCRIPT_NAME>/excludes.txt
-		Any files / folders you want to exclude from the transfers.
-	/etc/systemd/system/<SCRIPT_NAME>.service
-		Set "User=<user_to_run_as>" for the script and RClone transfer.
-	/etc/systemd/system/<SCRIPT_NAME>.timer
-		Set when you want this to run.
+Edit the following files:<br>
+	/usr/local/scripts/<SCRIPT_NAME>/config.json<br>
+		This is where most of your transfer settings are defined.<br>
+	/usr/local/scripts/<SCRIPT_NAME>/excludes.txt<br>
+		Any files / folders you want to exclude from the transfers.<br>
+	/etc/systemd/system/<SCRIPT_NAME>.service<br>
+		Set "User=<user_to_run_as>" for the script and RClone transfer.<br>
+	/etc/systemd/system/<SCRIPT_NAME>.timer<br>
+		Set when you want this to run.<br>
 
-Fix ownership:
-	$ sudo chown -R <user_to_run_as> /usr/local/scripts/<SCRIPT_NAME>
+Fix ownership:<br>
+`$ sudo chown -R <user_to_run_as> /usr/local/scripts/<SCRIPT_NAME>`<br><br>
 
-Add any required endpoints into rclone (not required for local src / dest):
-	$ su <user_to_run_as>
-	$ export RCLONE_CONFIG=/usr/local/scripts/<SCRIPT_NAME>/rclone.conf
-	$ rclone config
-		See: https://rclone.org/commands/rclone_config/
+Add any required endpoints into rclone (not required for local src / dest):<br>
+`$ su <user_to_run_as>`<br>
+`$ export RCLONE_CONFIG=/usr/local/scripts/<SCRIPT_NAME>/rclone.conf`<br>
+`$ rclone config`<br>
+	See: https://rclone.org/commands/rclone_config/
 
 
 
 
 ### Enable ###
-$ sudo systemctl enable <SCRIPT_NAME>.timer
+`$ sudo systemctl enable <SCRIPT_NAME>.timer`
