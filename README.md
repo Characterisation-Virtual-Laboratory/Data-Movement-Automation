@@ -15,8 +15,12 @@ RClone v1.61.1+<br>
 <br><br><br><br>
 
 ### Download Commands
-`$ cd ~/Downloads`<br>
-`$ git clone https://github.com/Characterisation-Virtual-Laboratory/Data-Movement-Automation`
+
+```
+$ cd ~/Downloads
+$ git clone https://github.com/Characterisation-Virtual-Laboratory/Data-Movement-Automation
+```
+
 <br><br><br><br>
 
 ### Install Commands
@@ -55,7 +59,7 @@ RClone v1.61.1+<br>
 ```
 $ su <user_to_run_as>
 $ export RCLONE_CONFIG=/usr/local/scripts/<SCRIPT_NAME>/rclone.conf
-$ rclone config<br>
+$ rclone config
 ```
 
 > See: https://rclone.org/commands/rclone_config/
