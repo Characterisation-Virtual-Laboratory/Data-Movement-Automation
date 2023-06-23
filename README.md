@@ -27,15 +27,15 @@ $ git clone https://github.com/Characterisation-Virtual-Laboratory/Data-Movement
 **SET:** "USER_NAME" inside "INSTALL.sh" to the account the script will run as.
 
 > **OPTIONAL:** Change "SCRIPT_NAME" inside "INSTALL.sh" to a new name.<br>
-> Allows installing multiple copies under different names, useful if running multiple copies<br>
-> eg: A copy per microscope, or a separate backup script etc.<br>
+> Allows installing multiple copies under different names, useful if running<br>
+> A copy per microscope, or a separate backup script etc.<br>
 
 `$ sudo /bin/bash ./INSTALL.sh`
 <br><br><br><br>
 
 ### Configuration
 
-<br>**Edit the following files:**<br>
+**Edit the following files:**<br>
 `/usr/local/scripts/<SCRIPT_NAME>/config.json`<br>
 > This is where most of your transfer settings are defined.<br>
 
