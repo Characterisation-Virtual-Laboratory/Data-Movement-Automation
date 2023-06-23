@@ -1,0 +1,13 @@
+### Filter File
+### See: https://rclone.org/filtering/
+
+### Always exclude these
+- ._.DS_Store
+- .DS_Store
+- .Trash/
+
+### Include theses
++ *filter*/**
+
+### Exclude everything else
+- **
