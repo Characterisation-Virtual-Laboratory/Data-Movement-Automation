@@ -1,6 +1,6 @@
 ##########################################################################################
 # Written by Joshua Silver, jsilver@uow.edu.au                                           #
-# Last Change: 2023-04-13                                                                #
+# Last Change: 2023-06-23                                                                #
 #                                                                                        #
 # Requires Python 3.8+: "$ sudo dnf install python38"                                    #
 # Requires RClone: "$curl -O https://downloads.rclone.org/rclone-current-linux-amd64.zip #
@@ -110,8 +110,11 @@ def do_transfer(data_dict):
             commandList.append(f"--transfers={i['rclone_num_transfers']}")
         if i['rclone_num_checkers'] != -1:
             commandList.append(f"--checkers={i['rclone_num_checkers']}")
-        if i['rclone_excludes'] == "on":
-            commandList.append(f"--exclude-from={data_dict['run_data']['script_path']}/excludes.txt")
+        if i['rclone_filters'] == "on":
+            if os.path.exists(f"{data_dict['run_data']['script_path']}/{i['description']}_filters.txt"):
+                commandList.append(f"--filter-from={data_dict['run_data']['script_path']}/{i['description']}_filters.txt")
+            else:
+                commandList.append(f"--filter-from={data_dict['run_data']['script_path']}/filters.txt")
         if i['rclone_min_age_seconds'] != -1:
             commandList.append(f"--min-age={i['rclone_min_age_seconds']}s")
         if i['rclone_min_age_days'] != -1:
