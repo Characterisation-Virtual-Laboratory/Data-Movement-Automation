@@ -20,8 +20,12 @@ cp TransferScript.timer ${SYSTEMD_PATH}/${SCRIPT_NAME}.timer
 chown -R ${USER_NAME} ${INSTALL_PATH}
 
 # Update service file
+sed -i "s|^Wants=.*|Wants=${SCRIPT_NAME}.timer" ${SYSTEMD_PATH}/${SCRIPT_NAME}.service
 sed -i "s|^User=.*|User=${USER_NAME}|g" ${SYSTEMD_PATH}/${SCRIPT_NAME}.service
 sed -i "s|^ExecStart=.*|ExecStart=/usr/bin/python3 -O ${INSTALL_PATH}/${SCRIPT_NAME}.py|g" ${SYSTEMD_PATH}/${SCRIPT_NAME}.service
+
+# Update timer file
+sed -i "s|^Requires=.*|Requires=${SCRIPT_NAME}.service" ${SYSTEMD_PATH}/${SCRIPT_NAME}.timer
 
 # Ensure Permissions
 chmod 755 ${INSTALL_PATH}/${SCRIPT_NAME}.py
