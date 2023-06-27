@@ -15,11 +15,8 @@ RClone v1.61.1+<br>
 `$ curl -O https://downloads.rclone.org/rclone-current-linux.amd.zip`
 <br><br><br><br>
 
-### Download Commands
-```
-$ cd ~/Downloads
-$ git clone https://github.com/Characterisation-Virtual-Laboratory/Data-Movement-Automation
-```
+### Download Command
+`$ cd ~/Downloads && git clone https://github.com/Characterisation-Virtual-Laboratory/Data-Movement-Automation`
 <br><br><br><br>
 
 ### Install Commands
@@ -30,11 +27,10 @@ $ git clone https://github.com/Characterisation-Virtual-Laboratory/Data-Movement
 > Allows installing multiple copies under different names, useful if running<br>
 > A copy per microscope, or a separate backup script etc.<br>
 
-`$ sudo /bin/bash ./INSTALL.sh`
+`$ sudo ./INSTALL.sh`
 <br><br><br><br>
 
 ### Configuration
-
 **Edit the following files:**<br>
 `/usr/local/scripts/<SCRIPT_NAME>/config.json`<br>
 > This is where most of your transfer settings are defined.<br>
