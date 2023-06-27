@@ -23,7 +23,7 @@ def pre_run_setup(data_dict):
     data_dict['run_data'] = {}
     now = time.time()
     data_dict['run_data']['start_time_val'] = now
-    data_dict['run_data']['start_time_str'] = time.strftime("%Y%m%d-%H%M", time.localtime(now))
+    data_dict['run_data']['start_time_str'] = time.strftime("%Y%m%d-%H%M%S", time.localtime(now))
     if __debug__:
         print(f"Date Val: {data_dict['run_data']['start_time_val']}")
         print(f"Date Str: {data_dict['run_data']['start_time_str']}")
