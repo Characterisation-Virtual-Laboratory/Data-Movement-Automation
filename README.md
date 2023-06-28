@@ -12,7 +12,7 @@ Python 3.8+<br>
 `$ sudo dnf install python38`
 
 RClone v1.61.1+<br>
-`$ curl -O https://downloads.rclone.org/rclone-current-linux.amd.zip`
+`$ curl -O https://downloads.rclone.org/rclone-current-linux-amd64.zip`
 <br><br><br><br>
 
 ### Download Command
